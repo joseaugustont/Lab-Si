@@ -1,0 +1,16 @@
+<div class="col s12">
+    <div class="row">
+      <p>Adiciona Artista</p>
+      <div class="input-field col s6">
+        <input [(ngModel)]="music.name" type="text">
+        <label for="nome" class="active">Nome da música:</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s6">
+        <input [(ngModel)]="album.artist" type="text">
+        <label for="image" class="active">Imagem:</label>
+      </div>
+    </div>
+    <a class="waves-effect waves-light btn #1e88e5 blue darken-1" (click)="add()">Enviar</a>
+  </div>
