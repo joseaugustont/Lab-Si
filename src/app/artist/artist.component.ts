@@ -15,7 +15,7 @@ export class ArtistComponent {
   artists: Array<Artist>;
 
   constructor(private artistsService: ArtistService) {
-    this.artists = this.artistsService.artists;
+    this.artists = this.artistsService.getArtists();
   }
 
 }

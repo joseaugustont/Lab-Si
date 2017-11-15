@@ -1,16 +1,34 @@
 <div class="col s12">
     <div class="row">
-      <p>Adiciona Artista</p>
+      <p>Adicionar música</p>
       <div class="input-field col s6">
-        <input [(ngModel)]="music.name" type="text">
+        <input type="text" #nameM>
         <label for="nome" class="active">Nome da música:</label>
       </div>
     </div>
     <div class="row">
       <div class="input-field col s6">
-        <input [(ngModel)]="album.artist" type="text">
-        <label for="image" class="active">Imagem:</label>
+        <input type="text" #artist>
+        <label for="nome" class="active">Nome do artista:</label>
       </div>
     </div>
-    <a class="waves-effect waves-light btn #1e88e5 blue darken-1" (click)="add()">Enviar</a>
+    <div class="row">
+      <div class="input-field col s6">
+        <input type="text" #nameA>
+        <label for="nome" class="active">Nome do album:</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s6">
+        <input type="text" #dateR>
+        <label for="date" class="active">Ano de lançamento:</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s6">
+        <input type="text" #time>
+        <label for="nome" class="active">Duração:</label>
+      </div>
+    </div>
+    <a class="waves-effect waves-light btn #1e88e5 blue darken-1" (click)="add(nameM.value, artist.value, nameA.value, dateR.value, time.value)">Enviar</a>
   </div>

@@ -7,7 +7,7 @@ import { ArtistFormComponent } from './artist-form/artist-form.component';
 
 
 const artistRoutes: Routes = [
-  { path: 'artist', component: ArtistComponent, children : [
+  { path: '', component: ArtistComponent, children : [
     { path: 'new', component: ArtistFormComponent }
   ]},
 ];

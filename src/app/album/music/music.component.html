@@ -1,3 +1,17 @@
-<p>
-  music works!
-</p>
+<table class="highlight">
+    <thead>
+      <tr>
+          <th>Música</th>
+          <th>Ano de lançamento</th>
+          <th>Duração</th>
+      </tr>
+    </thead>
+
+    <tbody *ngFor="let item of musics">
+      <tr>
+        <td>{{ item.name }}</td>
+        <td>{{ item.dateRelase }}</td>
+        <td>{{ item.time }}</td>
+      </tr>
+    </tbody>
+</table>

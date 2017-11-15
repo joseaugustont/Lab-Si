@@ -8,9 +8,10 @@ import { MusicComponent } from './music/music.component';
 
 
 const appRoutes: Routes = [
-  { path: 'album', component: AlbumComponent},
-  { path: 'album/:id', component: MusicComponent },
-  { path: 'album/:id/new', component: MusicFormComponent }
+  { path: 'album', component: AlbumComponent, children : [
+    { path: 'newAlbum', component: MusicFormComponent },
+    { path: ':id', component: MusicComponent }
+  ]},
 ];
 
 
