@@ -1,22 +1,16 @@
-
 <div class="row">
-  <div class="col s6">
-      <p>Lista de Artistas
-          <a class="btn-floating btn waves-effect waves-light #1e88e5 blue darken-1 float: right" title="Adiciona Artista" routerLink="new"><i class="material-icons">add</i></a>
-      </p>
-    <div class="col s12">
-    </div>
+<div class="col s6">
+    <p>Lista de Artistas
+        <a class="btn-floating btn waves-effect waves-light #1e88e5 blue darken-1 float: right" title="Adiciona Artista" routerLink="/new"><i class="material-icons">add</i></a>
+       </p>
     <ul class="collection">
       <li class="collection-item avatar " *ngFor="let artist of artists">
         <img [src]="artist.image" alt="" class="circle">
         <span class="title">{{ artist.name }}</span>
-        <!--p>First Line
-        </p-->
-        <a href="" class="secondary-content"><i class="material-icons ">send</i></a>
+        <a [routerLink]="['/artist', artist.name]" class="secondary-content"><i class="material-icons ">send</i></a>
       </li>
     </ul>
   </div>
-
   <div class="col s6">
     <router-outlet></router-outlet>
   </div>

@@ -11,6 +11,18 @@ export class AlbumService {
   getAlbuns(): Array<Album> {
     return this.albuns;
   }
+
+  getAlbunsArtist(artist: string): Array<Album> {
+    const album: Array<Album> = new Array();
+    for (const item of this.albuns) {
+      // tslint:disable-next-line:triple-equals
+      if (item.artist == artist) {
+        album.push(item);
+      }
+    }
+    return album;
+  }
+
   getMusics(id: string): Array<Music> {
     for (const item of this.albuns) {
       // tslint:disable-next-line:triple-equals

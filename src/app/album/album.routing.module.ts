@@ -5,6 +5,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { AlbumComponent } from './album.component';
 import { MusicFormComponent } from './music-form/music-form.component';
 import { MusicComponent } from './music/music.component';
+import { PlaylistComponent } from './playlist/playlist.component';
+import { PlaylistMusicComponent } from './playlist-music/playlist-music.component';
 
 
 const appRoutes: Routes = [
@@ -12,6 +14,9 @@ const appRoutes: Routes = [
     { path: 'newAlbum', component: MusicFormComponent },
     { path: ':id', component: MusicComponent }
   ]},
+  { path: 'playlist', component: PlaylistComponent, children : [
+    { path: ':id', component: PlaylistMusicComponent}
+  ]}
 ];
 
 

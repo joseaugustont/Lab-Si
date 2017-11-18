@@ -20,9 +20,10 @@ export class MusicComponent implements OnInit {
     this.inscricao = this.route.params.subscribe(
       (params: any) => {
         this.id = params['id'];
+
+        this.musics = albumService.getMusics(this.id);
       }
     );
-    this.musics = albumService.getMusics(this.id);
   }
 
   ngOnInit() {

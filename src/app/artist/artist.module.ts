@@ -7,6 +7,10 @@ import { ArtistFormComponent } from './artist-form/artist-form.component';
 import { ArtistComponent } from './artist.component';
 import { ArtistService } from './artist.service';
 import { ArtistRoutingModule } from './artist.routing.module';
+import { ArtistDetailComponent } from './artist-detail/artist-detail.component';
+import { ArtistSearchComponent } from './artist-search/artist-search.component';
+import { FavoritService } from './favorit.service';
+import { FavoritsDetailComponent } from './favorits-detail/favorits-detail.component';
 
 @NgModule({
   imports: [
@@ -19,8 +23,14 @@ import { ArtistRoutingModule } from './artist.routing.module';
   ],
   declarations: [
     ArtistFormComponent,
-    ArtistComponent
+    ArtistComponent,
+    ArtistDetailComponent,
+    ArtistSearchComponent,
+    FavoritsDetailComponent
   ],
-  providers: [ArtistService]
+  providers: [
+    ArtistService,
+    FavoritService
+    ]
 })
 export class ArtistModule { }

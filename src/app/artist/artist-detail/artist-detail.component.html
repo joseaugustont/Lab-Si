@@ -1,0 +1,64 @@
+<div>
+  <h5 class="center">Detalhes do Artista</h5>
+  <div class="divider"></div>
+  <div class="section">
+    <table class="highlight ">
+        <thead>
+            <tr>
+                <th>------------</th>
+                <th>--------------------------------------------------</th>
+                <th>-----</th>
+            </tr>
+          </thead>
+      <tbody>
+        <tr>
+          <td> Artista: </td>
+          <td>{{ artist.name }}</td>
+        </tr>
+        <tr>
+            <td>Nota: </td>
+            <td>{{ artist.note }}</td>
+          </tr>
+        <tr>
+            <td> Última música: </td>
+            <td>{{ artist.endMusic }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+    <div class="center">
+      <img [src]="artist.image">
+    </div>
+</div>
+<div class="divider"></div>
+<div>
+    <table class="highlight">
+        <thead>
+          <tr>
+              <th>Álbuns</th>
+          </tr>
+        </thead>
+
+        <tbody *ngFor="let item of albuns">
+          <tr>
+            <td>{{ item.name }}</td>
+          </tr>
+        </tbody>
+    </table>
+</div>
+<br/>
+
+<div>
+  <ul class="collection with-header">
+      <li class="collection-item">
+        <input type="text" class="validate " #note>
+        <label class="active">Digite uma nota para o artista</label>
+        <a title="enviar" class="secondary-content bnt waves-effect"(click)="setNote(note.value)">
+        <i class="material-icons">send</i></a></li>
+      <li class="collection-item"><input type="text" class="validate " #ultima>
+          <label class="active">Digite a última música ouvida</label>
+      <a title="enviar" class="secondary-content bnt waves-effect" (click)="setEndMusic(ultima.value)"><i class="material-icons">send</i></a></li>
+  </ul>
+  <a  class="secondary-content first-line waves-effect" title="Adicionar aos favoritos" (click)="addFavorit(artist)"><i class="medium material-icons ">grade</i></a>
+</div>
+

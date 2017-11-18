@@ -8,6 +8,9 @@ import { AlbumComponent } from './album.component';
 import { AlbumRoutingModule } from './album.routing.module';
 import { ArtistService } from './../artist/artist.service';
 import { AlbumService } from './album.service';
+import { PlaylistComponent } from './playlist/playlist.component';
+import { PlaylistService } from './playlist.service';
+import { PlaylistMusicComponent } from './playlist-music/playlist-music.component';
 
 @NgModule({
   imports: [
@@ -18,11 +21,14 @@ import { AlbumService } from './album.service';
   declarations: [
     MusicComponent,
     MusicFormComponent,
-    AlbumComponent
+    AlbumComponent,
+    PlaylistComponent,
+    PlaylistMusicComponent
   ],
   providers: [
     AlbumService,
-    ArtistService
+    ArtistService,
+    PlaylistService
   ]
 })
 export class AlbumModule { }
